@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Nav = ({ search, setSerach }) => {
+const Nav = ({ search, setSearch }) => {
   return (
     <nav className="Nav">
       <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
@@ -8,9 +8,10 @@ const Nav = ({ search, setSerach }) => {
         <input
           id="search"
           type="text"
+
           placeholder="Search Posts"
           value={search}
-          onChange={(e) => setSerach(e.target.value)}
+          onChange={(e) => setSearch(e.target.value)}
         />
       </form>
       <ul>
